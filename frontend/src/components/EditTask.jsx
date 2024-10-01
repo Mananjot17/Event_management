@@ -44,7 +44,7 @@ const EditTask = () => {
     };
 
     try {
-      const res = await fetch(`http://localhost:3000/api/user/updateTask/${task._id}`, {
+      const res = await fetch(`/api/user/updateTask/${task._id}`, {
         method: 'PUT',
         credentials: 'include',
         headers: {

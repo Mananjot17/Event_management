@@ -26,7 +26,7 @@ const CreateTask = () => {
     };
 
     try {
-      const res = await fetch('http://localhost:3000/api/user/createTask', {
+      const res = await fetch('/api/user/createTask', {
         method: 'POST',
         credentials: 'include',
         headers: {

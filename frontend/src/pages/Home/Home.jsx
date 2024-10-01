@@ -12,7 +12,7 @@ const Home = () => {
 
     const fetchTasks = async () => {
       try {
-        const res = await fetch(`http://localhost:3000/api/${authUser.role === 'Admin' ? 'admin/getTasks' : 'user/getUserTasks'}`);
+        const res = await fetch(`/api/${authUser.role === 'Admin' ? 'admin/getTasks' : 'user/getUserTasks'}`);
         
         if (!res.ok) {
           throw new Error(`Error: ${res.message}`);
@@ -41,7 +41,7 @@ const Home = () => {
 
   const handleLogout = async() =>{
     try {
-      const response = await fetch('http://localhost:3000/api/auth/logout', {
+      const response = await fetch('/api/auth/logout', {
         method: 'POST',
         credentials: 'include',
         headers: {

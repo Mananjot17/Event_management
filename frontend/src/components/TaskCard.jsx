@@ -12,7 +12,7 @@ const TaskCard = ({task , setTasks , users , refreshTasks}) => {
 
   const deleteTask = async()=>{
     try {
-      const response = await fetch(`http://localhost:3000/api/user/deleteTask/${task._id}`, {
+      const response = await fetch(`/api/user/deleteTask/${task._id}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
@@ -40,7 +40,7 @@ const TaskCard = ({task , setTasks , users , refreshTasks}) => {
     }
 
     try {
-      const response = await fetch('http://localhost:3000/api/admin/assignTask', {
+      const response = await fetch('/api/admin/assignTask', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
